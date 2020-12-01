@@ -10,6 +10,21 @@ const readAll = (req, res) => {
     })
 }
 
+const create = (req, res) => {
+    
+    let aluno = new alunos(req.body)
+    aluno.save(function (err) {
+
+        if (err) {
+            return res.status(424).send({message: err.message})
+        } else {
+            return res.status(201).send({ message: "aluno incluído com sucesso",})
+        }
+    })
+}
+
+
 module.exports = {
-    readAll
+    readAll,
+    create
 }
