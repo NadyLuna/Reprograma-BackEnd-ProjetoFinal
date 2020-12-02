@@ -1,5 +1,6 @@
 const alunos = require('../models/alunos')
 
+
 const readAll = (req, res) => {
     alunos.find(function (err, aluno) {
         if (err) {
@@ -9,6 +10,17 @@ const readAll = (req, res) => {
         }
     })
 }
+
+const readid = (req, res) => {
+    const cpf = req.params.cpf 
+    alunos.find({cpf:cpf},(err, aluno) => { 
+        if(err) {   return res.status(424).send({message: err.message})
+    } else {
+        return res.status(200).send(aluno)
+    }
+})       
+}
+
 
 const create = (req, res) => {
     
@@ -23,8 +35,20 @@ const create = (req, res) => {
     })
 }
 
+const update = (req, res) => {
+    const cpf = req.params.cpf;
+    alunos.updateOne({ cpf }, {$set: req.body}, {upsert: true}, function (err) {
+        if (err) {
+            return res.status(500).send({message: err.message});
+        } else {
+            return res.status(200).send({message: "Aluno atualizado com sucesso"});
+        }
+    });
+}
 
 module.exports = {
     readAll,
-    create
+    create,
+    update,
+    readid
 }
