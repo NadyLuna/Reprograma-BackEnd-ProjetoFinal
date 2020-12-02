@@ -16,6 +16,7 @@ db.once("open", function () {
 })
 
 const alunos = require("./routes/alunosRouter")
+const faculdades = require("./routes/faculdadesRouter")
 
 app.use(express.json());
 
