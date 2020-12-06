@@ -1,8 +1,8 @@
 {
-  "name": "Reprograma-BackEnd-ProjetoFinal",
+  "name": "projetoinalreprograma",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
@@ -15,6 +15,7 @@
     "nodemon": "^2.0.6"
   },
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "dotenv-safe": "^8.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.17"
