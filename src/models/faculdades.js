@@ -1,19 +1,21 @@
 const mongoose = require('mongoose');
-const {alunosSchema} = require ('../models/alunos')
 
 const faculdadesSchema = new mongoose.Schema({
-
-    idFaculdade: { type: String, required: true},
-    faculdade: { type: String },  
-    aluno: [alunosSchema]  
+    idFaculdade: { type: String },
+    nomefaculdade: { type: String },
+    matriculado: { type: String},
+        
     
 }, {
     versionKey: false
 });
 
-const faculdades = mongoose.model('faculdades', faculdadesSchema)
+const faculdadesModel = mongoose.model('faculdades', faculdadesSchema)
 
-module.exports = faculdades
+module.exports = {
+    faculdadesModel,
+    faculdadesSchema
+}
     
 
     

@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+const{ faculdadesSchema } = require('./faculdades')
+
 const alunosSchema = new mongoose.Schema({
-    
     nome: { type: String },
     email: { type: String },
     cpf: { type: String, required: true },
-    matriculado: { type: String, required: true}  
+    faculdade: [faculdadesSchema]
 }, {
     versionKey: false
 });
