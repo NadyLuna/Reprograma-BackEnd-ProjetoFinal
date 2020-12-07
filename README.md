@@ -2,7 +2,8 @@
 
 Emissão de Carteira de Estudante Universitária de forma prática e confiável.
 
- Os Estudante pode verificar se estão aptos a solicitar a carteira de estudante no ano letivo.
+ Os Estudante pode verificar se estão aptos a solicitar a carteira de estudante no ano letivo através do APP. 
+ A faculdade irá confirmar se o aluno está regularmente matriculado naquele ano letivo e o aluno confirmado poderá realizar a solicitação da carteira.
  O Objetivo é dirimir dificuldades no processo atual e fraudes.
 
 <p>
