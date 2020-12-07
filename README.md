@@ -6,7 +6,7 @@ Emissão de Carteira de Estudante Universitária de forma prática e confiável.
  O Objetivo é dirimir dificuldades no processo atual e fraudes.
 
 <p>
-    <img src="img/CarteiraEstudante.jpg" width="600px" align="center"> 
+    <img src="img/CarteiraEstudante.jpg" width="500px" align="center"> 
     <br> </br>
 </p>
 
@@ -39,12 +39,13 @@ Emissão de Carteira de Estudante Universitária de forma prática e confiável.
 - Executar  ```npm install``` no terminal para instalar as dependências; Neste caso como se trata de um projeto existente o npm install fará a instalação das dependências. 
 -  Verificar o arquivo `.en.example` quais as variáveis de ambiente necessárias;
 - Conectar ao [MongoAtlas](https://www.mongodb.com/cloud/atlas); Para criar ou utilizar um Cluster e inserir a String de Conexão no app.js
-`
-    mongoose.connect(`${process.env.MONGODB_URL}`, {
+
+```    
+mongoose.connect(`${process.env.MONGODB_URL}`, {
     useNewUrlParser: true,      
     useUnifiedTopology: true
     });
-`
+```
 
 - Conectar ao [Heroku](https://dashboard.heroku.com/apps) - certificar que as dependências estão instaladas em modo de produção (not as dev).
 
