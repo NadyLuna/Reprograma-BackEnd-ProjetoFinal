@@ -6,7 +6,7 @@ Emissão de Carteira de Estudante Universitária de forma prática e confiável.
  O Objetivo é dirimir dificuldades no processo atual e fraudes.
 
 <p>
-    <img src="img/CarteiraEstudante.jpg" width="500px" align="center"> 
+    <img src="img/CarteiraEstudante.jpg" width="400px" align="center"> 
     <br> </br>
 </p>
 
@@ -36,18 +36,43 @@ Emissão de Carteira de Estudante Universitária de forma prática e confiável.
 ### __Boot__ 
 
 - Executar `git clone` ou fork no repositório no github; 
-- Executar  ```npm install``` no terminal para instalar as dependências; Neste caso como se trata de um projeto existente o npm install fará a instalação das dependências. 
--  Verificar o arquivo `.en.example` quais as variáveis de ambiente necessárias;
-- Conectar ao [MongoAtlas](https://www.mongodb.com/cloud/atlas); Para criar ou utilizar um Cluster e inserir a String de Conexão no app.js
 
-```    
+```
+- Link do Git Hub
+
+https://github.com/NadyLuna/Reprograma-BackEnd-ProjetoFinal.git
+```
+
+- Executar  ```npm install``` no terminal para instalar as dependências; Neste caso como se trata de um projeto existente o npm install fará a instalação das dependências. 
+
+```
+- Terminal do gitbash ou Visal Code
+
+nadye@LAPTOP-U84EJJBI MINGW64 ~/Desktop/Reprograma-BackEnd/3-entregasSemana/Reprograma-BackEnd-ProjetoFinal (main)
+$ npm install
+```
+
+-  Verificar o arquivo `.env.example` quais as variáveis de ambiente necessárias;
+```
+- .env.example (Variáveis de ambiente necess)
+
+MONGODB_URL=string_de_conexao_banco_de_dados
+SECRET=chave_secreta
+PORT=porta
+```
+
+- Conectar ao [MongoAtlas](https://www.mongodb.com/cloud/atlas); Para criar ou utilizar um Cluster e inserir a String de Conexão no app.js. a `URL do MONGO_URL` fica "guardada" no `.env`conforme demonstrado no `.env.example`.
+
+``` 
+- String de conexão com Mongo Atlas
+   
 mongoose.connect(`${process.env.MONGODB_URL}`, {
     useNewUrlParser: true,      
     useUnifiedTopology: true
     });
 ```
 
-- Conectar ao [Heroku](https://dashboard.heroku.com/apps) - certificar que as dependências estão instaladas em modo de produção (not as dev).
+
 
 ### __Features__
 
