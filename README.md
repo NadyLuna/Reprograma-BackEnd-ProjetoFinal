@@ -2,8 +2,9 @@
 
 Emissão de Carteira de Estudante Universitária de forma prática e confiável.
 
-Os Estudante pode verificar se está apto para solicitar a carteira de estudante direto no aplicativo.
- O Estudante faz um login e senha, seleciona sua faculdade e tem o retono sobre se ele está apto a solicitar a carteira de estudante.
+ Os Estudante pode verificar se estão aptos a solicitar a carteira de estudante no ano letivo.
+ O Objetivo é dirimir dificuldades no processo atual e fraudes.
+
 <p>
     <img src="img/CarteiraEstudante.jpg" width="600px" align="center"> 
     <br> </br>
@@ -17,20 +18,20 @@ Os Estudante pode verificar se está apto para solicitar a carteira de estudante
 
  ### Database Programming 
   ![MongoDB](https://img.shields.io/badge/MongoDB-444444.svg?logo=mongoDB&logoColor=green)
-### Dependences Dev
- - [x] express 4.17.1  
+#### Dependences Dev
+
  - [x] nodemon 2.0.6
-### Dependences
+
+#### Dependences
 - [x] dotenv-safe 8.2.0  
+- [x] express 4.17.1  
 - [x] mongoose 5.10.17  
+
+boot at the / gitbash prompt
+
+- `git clone` ou fork no repositório  
+-  Dar um `npm install` no terminal para instalar as dependências
+-  verificar o arquivo `.en.example` quais as variáveis de ambiente necessárias
+- 
 ### Features
 
-Verbo   Router
-:---   |:---   
-POST   | /alunos
-POST   | /faculdades
-GET    | /alunos
-GET    | /faculdades
-GET    | /alunos/:cpf
-PUT    | /alunos/:cpf
-DELETE | /alunos/:cpf
