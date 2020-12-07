@@ -1,15 +1,17 @@
 const mongoose = require('mongoose');
 const alunosSchema = new mongoose.Schema({
+    
     nome: { type: String },
     email: { type: String },
     cpf: { type: String, required: true },
-    idfaculdade: { type: String, required: true},
-    grauEscolaridade: { type: String },
-    curso: { type: String },
+    matriculado: { type: String, required: true}  
 }, {
     versionKey: false
 });
 
-const alunos = mongoose.model('alunos', alunosSchema)
+const alunosModel = mongoose.model('alunos', alunosSchema)
 
-module.exports = alunos;
+module.exports = {
+    alunosModel,
+    alunosSchema
+}
