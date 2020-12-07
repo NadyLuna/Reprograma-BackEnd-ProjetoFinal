@@ -6,7 +6,7 @@ Emissão de Carteira de Estudante Universitária de forma prática e confiável.
  O Objetivo é dirimir dificuldades no processo atual e fraudes.
 
 <p>
-    <img src="img/CarteiraEstudante.jpg" width="400px" align="center"> 
+    <img src="img/CarteiraEstudante.jpg" align="center" width="400px" > 
     <br> </br>
 </p>
 
@@ -16,7 +16,7 @@ Emissão de Carteira de Estudante Universitária de forma prática e confiável.
 #### Software Programming
  ![Nodejs](https://img.shields.io/badge/NodeJs-339933.svg?logo=node.js&logoColor=white)
 
- ### Database Programming 
+ #### Database Programming 
   ![MongoDB](https://img.shields.io/badge/MongoDB-444444.svg?logo=mongoDB&logoColor=green)
 #### Dependences Dev
 
