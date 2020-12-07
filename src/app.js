@@ -33,4 +33,5 @@ app.use(function (req, res, next) {
 app.use("/alunos", alunos)
 app.use("/faculdades", faculdades)
 
+
 module.exports = app
