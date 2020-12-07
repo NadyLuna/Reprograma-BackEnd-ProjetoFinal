@@ -2,7 +2,12 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/alunosController.js");
 
-router.get("/",controller.readAll);
-router.post("/",controller.create)
+router.get("/",controller.selectAll);
+router.get("/:cpf",controller.selectById);
+router.post("/",controller.insertStudant);
+router.put("/:cpf",controller.updateStudant);
+router.patch("/:cpf",controller.updateStudant);
+router.delete("/:cpf",controller.deleteStudant);
+
 
 module.exports = router;
