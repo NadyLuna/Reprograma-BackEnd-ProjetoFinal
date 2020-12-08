@@ -50,22 +50,23 @@ const selectById = (req, res) => {
     const cpf = req.params.cpf
     alunosModel.find(cpf, (err, aluno) => {
         if (err) {
-            return res.status(424).send({
-                message: err.message
-            })
-        }
-    if (aluno) {
+
+            return res.status(424).send({message: err.message})
+
+        } else if (aluno.length > 0) {            
             return res.status(200).send(aluno)
+        }else{
+        return res.status(404).send({message: "Aluno atualizado com sucesso"})
         }
-        return res.status(404).send('Aluno não encontrado')
     })
 }
 
 
 const updateStudant = (req, res) => {
     const cpf = req.params.cpf;
-        alunosModel.find({cpf}, (err,alunos)=>{
-        if(alunos > 0){
+
+        alunosModel.find({cpf}, (err,alunos) => {
+        if(alunos.length > 0){
             return res.status(404).send("Não registros com esse cpf para serem atualizados");
         }else{
             alunosModel.updateOne({cpf}, {$set: req.body}, {upsert: true}, function (err) {
@@ -83,18 +84,16 @@ const updateStudant = (req, res) => {
 const deleteStudant = (req, res) => {
     const cpf = req.params.cpf;
     alunosModel.find({cpf}, (err, alunos) => {
-        if (alunosModel.length > 0) {
+        if (alunos.length > 0) {
         alunosModel.deleteOne({cpf}, (err) => {
                 if (err) {
-                    return res.status(500).send({message: err.message});
-        
+                return res.status(500).send({message: err.message});        
     };
-                return res.status(200).send({status: true, mensagem: "aluno excluído com sucesso",});
-            
+                return res.status(200).send({status: true, mensagem: "aluno excluído com sucesso",})            
         });
 
-        } else {
-            return res.status(404).send("aluno não encontrado");
+                } else {
+                return res.status(404).send({message: "Aluno não encontrado"});
         
         };
     });
