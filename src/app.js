@@ -15,6 +15,7 @@ db.once("open", function () {
     console.log("conexão feita com sucesso.")
 })
 
+const index = require("./routes/index")
 const alunos = require("./routes/alunosRouter")
 const faculdades = require("./routes/faculdadesRouter")
 
@@ -30,6 +31,7 @@ app.use(function (req, res, next) {
     next()
 })
 
+app.use("/", index)
 app.use("/alunos", alunos)
 app.use("/faculdades", faculdades)
 
