@@ -1,10 +1,9 @@
 <h1 align="center">
  
- 
-
-<video src=”carteira.mp4″ width=”300″ height=”150″ poster=”estudante.png” controls> </video>
-
-
+ <p align="center">
+  <kbd>
+    <img width="400" style="border-radius: 5px" height="200" src="https://imgur.com/9MhsZYN.gif" alt="Intro">
+  </kbd>
 
 </h1>
 
