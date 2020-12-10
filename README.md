@@ -87,7 +87,7 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
 #### - Running tests
 
 - [x] [Postman](https://www.postman.com/)
-  **Note:** Pode utilizar o Localhost pelo `http://localhost/3000/` ou pelo Heroku <a href="#Deploy">Deploy</a>
+  **Note:** Pode utilizar o Localhost pelo `http://localhost/3000/` ou pelo Heroku <a href="#https://finalproject-reprograma.herokuapp.com/">Deploy</a>
 </p>
 
 ## :handshake: **Contributing**
