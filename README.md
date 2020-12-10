@@ -1,18 +1,21 @@
-<h1 align="center"> Carteira de Estudante Fácil </h1>
-
+<h1 align="center">
+ 
  <p>
-    <img src="img/CarteiraEstudante.jpg" align="center" width="300px" > 
+    <img src="img/CarteiraEstudante.jpg "align="center" width="300px" > 
     <br> </br>
+    <p style = "font-family:Copperplate Gothic;">Fácil </p>
 </p>
+</h1>
 
-## Basic overview
+### Basic overview
  
  
  <p align="center"> Emissão de Carteira de Estudante Universitária de forma prática e confiável.</p>
  
-
-![Issues](https://img.shields.io/github/issues/NadyLuna/Reprograma-BackEnd-ProjetoFinal)
- ![Forks](https://img.shields.io/github/forks/NadyLuna/Reprograma-BackEnd-ProjetoFinal) ![Stars](https://img.shields.io/github/stars/NadyLuna/Reprograma-BackEnd-ProjetoFinal) 
+<p align="center">
+<img src="https://img.shields.io/github/issues/NadyLuna/Reprograma-BackEnd-ProjetoFinal">
+ <img src="https://img.shields.io/github/forks/NadyLuna/Reprograma-BackEnd-ProjetoFinal" >  
+ <img src="https://img.shields.io/github/stars/NadyLuna/Reprograma-BackEnd-ProjetoFinal" > </p>
 
 
  <h4 align="center"> 
@@ -40,11 +43,11 @@ _____
 #### - Clone & Install Dependencies
 1 - `Git clone https://github.com/NadyLuna/Reprograma-BackEnd-ProjetoFinal.git`  
 2- Instalar dependências NPM packages whith `npm install`  
-         2.1-  Dependencies used   
-           - [x] [dotenv-safe 8.2.0](https://https://www.npmjs.com/package/dotenv-safe)  
-               - [x] [express 4.17.1](https://https://expressjs.com/pt-br/)  
-               - [x] [mongoose 5.10.17](https://https://mongoosejs.com/docs/)   
-               - [x] [nodemon 2.0.6](https://https://www.npmjs.com/package/nodemon)
+2.1-  Dependencies used   
+- [x] [dotenv-safe 8.2.0](https://https://www.npmjs.com/package/dotenv-safe)  
+- [x] [express 4.17.1](https://https://expressjs.com/pt-br/)  
+- [x] [mongoose 5.10.17](https://https://mongoosejs.com/docs/)   
+- [x] [nodemon 2.0.6](https://https://www.npmjs.com/package/nodemon)
 
 3- Execute `npm start`
 
