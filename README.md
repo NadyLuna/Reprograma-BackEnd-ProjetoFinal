@@ -73,7 +73,7 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
 #### - Deploy 
 ![Heroku](https://img.shields.io/badge/Heroku-430098?align=style=flat-square&logo=heroku&logoColor=white)
 
-<a href="https://finalproject-reprograma.herokuapp.com/"><button style="background: #2365; border-radius: 1px; padding: 5px; cursor: pointer; color: #fff; border: none; font-size: 11px;">Clique aqui</button></a>  
+<a href="https://finalproject-reprograma.herokuapp.com/"><button style="background: #2365; border-radius: 1px; padding: 5px; cursor: pointer; color: #fff; border: none; font-size: 8px;">Clique aqui</button></a>  
 
 
 #### - Language, Software and Database
