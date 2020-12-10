@@ -2,7 +2,7 @@
  
  <p align="center">
   <kbd>
-    <img width="400" style="border-radius: 5px" height="200" src="https://imgur.com/9MhsZYN.gif" alt="Intro">
+    <img width="600" style="border-radius: 5px" height="300" src="https://imgur.com/9MhsZYN.gif" alt="Intro">
   </kbd>
 
 </h1>
