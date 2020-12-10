@@ -1,10 +1,10 @@
 <h1 align="center">
  
- <p>
-    <img src="img/CarteiraEstudante.jpg "align="center" width="300px" > 
-    <br> </br>
-    <p style = "font-family:Copperplate Gothic;">Fácil </p>
-</p>
+ 
+
+<video src=”carteira.mp4″ width=”300″ height=”150″ poster=”estudante.png” controls> </video>
+
+
 
 </h1>
 
@@ -26,6 +26,7 @@
 
 _____
 ### Features :checkered_flag:
+
 - Cadastro de faculdade
    - Cadastrar Faculdades participantes na aplicação através de login e senha
 
@@ -35,7 +36,9 @@ _____
 - Check  
    - Checar se o aluno está matriculado e apto a solicitar carteira de estudante.
 
-
+#### Back-end requirements
+ - Rota para cadastrar aluno(a) requerendo nome,e-mail e cpf;
+ 
 
 ## **Install instructions**
 
