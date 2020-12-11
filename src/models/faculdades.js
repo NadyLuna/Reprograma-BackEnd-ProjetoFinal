@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
-
+const {alunosSchema} = require('./alunos')
 const faculdadesSchema = new mongoose.Schema({
 
-    idfaculdade: { type: Number },
+    idFaculdade: { type: mongoose.Schema.Types.ObjectId, auto: true, required: true },
     codigo: { type: String},
-    nomefaculdade: { type: String },
-    nomealuno: { type: String},
+    nomeFaculdade: { type: String },
+    nomeAluno: { type: String},
     cpf: { type: String },
     matriculado: { type: Boolean},
-        
+    alunos: [alunosSchema]    
     
 }, {
     versionKey: false
