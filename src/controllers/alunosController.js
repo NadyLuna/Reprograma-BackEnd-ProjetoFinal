@@ -1,108 +1,86 @@
-
-
-const {alunosModel} = require('../models/alunos')
-const{ faculdadesModel} = require('../models/faculdades')
-
-//const bcrypt = require('bcryptjs')
-//const jwt = require('jsonwebtoken')
+const {alunosModel} = require("../models/alunos");
 
 const insertStudant = (req, res) => {  
-    const newStudant = new alunosModel({
-        nome:  req.body.nome,
-        email: req.body.email,
-        cpf: req.body.cpf,
-        faculdade: req.body.faculdade.map(facul => {
-        const colege = new faculdadesModel({
-        Idfaculdade: facul.Idfaculdade,
-        nomefaculdade: facul.nomefaculdade,
-        matriculado: facul.matriculado,
-        });
-        colege.save(err => {
-        if (err) {
-            return res.status(424).send({ message: err.message });
-    };
-});
-    return facul;
-    })
-}); 
+
+    alunosModel.findOne({email:req.body.email}, function(err,email) {
+
+        if (email){ res.status(404).send(`aluno já cadastrado, faça seu login.`);  
+        } else {
+    const newStudant = new alunosModel(req.body)           
     newStudant.save(err => {
         if (err) {
         return res.status(424).send({ message: err.message });
         };
         return res.status(201).send(newStudant);
-    });  
-};
+            }); 
+        } 
+    })
+};     
+
 
 const selectAll = (req, res) => {
     alunosModel.find((err, alunos) => {
-                if (err) {
-            return res.status(424).send({
-                message: err.message
-            })
-        } else {
-            return res.status(200).send(alunos)
-        }
-    })
-}
-
-
-const selectById = (req, res) => {
-    const cpf = req.params.cpf
-    alunosModel.find(cpf, (err, aluno) => {
         if (err) {
-
-            return res.status(424).send({message: err.message})
-
-        } else if (aluno.length > 0) {            
-            return res.status(200).send(aluno)
-        }else{
-        return res.status(404).send({message: "Aluno atualizado com sucesso"})
-        }
-    })
-}
-
-
-const updateStudant = (req, res) => {
-    const cpf = req.params.cpf;
-
-        alunosModel.find({cpf}, (err,alunos) => {
-        if(alunos.length > 0){
-            return res.status(404).send("Não registros com esse cpf para serem atualizados");
-        }else{
-            alunosModel.updateOne({cpf}, {$set: req.body}, {upsert: true}, function (err) {
-                if (err) {
-                    return res.status(500).send({message: err.message});
-                }
-                    return res.status(200).send({message: "Aluno atualizado com sucesso"});
-            })        
+            return res.status(424).send({ message: err.message,});
+        } else {
+            return res.status(200).send(alunos);
         }
     });
 };
 
+const selectAlunoById = (req, res) => {
+    const cpf = req.params.cpf;
+
+    alunosModel.findOne({cpf}, (err, alunos) => {
+        if (!alunos) {            
+            return res.status(424).send({message:'Aluno não cadastrado com este id'});
+        } else if (err) { 
+            return res.status(500).send({message: err.message});
+        } else {
+            return res.status(200).send({alunos})
+        }
+    })
+};
+
+const updateStudantById = (req, res) => {
+    const cpf = req.params.cpf;
+
+    alunosModel.findOne({cpf}, (err, alunos) => {
     
+        if( alunos.length > 0 ) {
+            return res.status(404).send("Não há alunos(a) com este cpf para ser atualizada");
+        }else {
+            alunosModel.updateOne({cpf}, {$set: req.body}, function (err){
+
+                if(err) {
+                return res.status(500).send({message: err.message});
+            }
+                return res.status(200).send({message: "Aluno(a) atualizado(a) com sucesso", status: true});
+            });        
+        };
+    });
+};
 
 const deleteStudant = (req, res) => {
     const cpf = req.params.cpf;
     alunosModel.find({cpf}, (err, alunos) => {
         if (alunos.length > 0) {
-        alunosModel.deleteOne({cpf}, (err) => {
+            alunosModel.deleteOne({ cpf}, (err) => {
                 if (err) {
-                return res.status(500).send({message: err.message});        
-    };
-                return res.status(200).send({status: true, mensagem: "aluno excluído com sucesso",})            
-        });
-
-                } else {
-                return res.status(404).send({message: "Aluno não encontrado"});
-        
-        };
+                    return res.status(500).send({message: err.message});
+                }
+                return res.status(200).send({ mensagem: "aluno excluído com sucesso", status: true });
+            });
+        } else {
+            return res.status(404).send({message: "Aluno não encontrado" });
+        }
     });
 };
 
 module.exports = {
     selectAll,
-    selectById,
+    selectAlunoById,
     insertStudant,
-    updateStudant,
+    updateStudantById,
     deleteStudant
 }
