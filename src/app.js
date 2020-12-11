@@ -2,12 +2,14 @@ require('dotenv-safe').config()
 const express = require('express')
 const app = express()
 const mongoose = require("mongoose")
-
+ 
 
 mongoose.connect(`${process.env.MONGODB_URL}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
+mongoose.set('useCreateIndex', true)
 
 let db = mongoose.connection;
 db.on("error", console.log.bind(console, "connection error:"))
@@ -28,6 +30,7 @@ app.use(function (req, res, next) {
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
     )
+    console.info('New Request Realized')
     next()
 })
 
