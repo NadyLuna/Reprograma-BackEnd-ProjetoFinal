@@ -3,9 +3,10 @@ const router = express.Router();
 const controller = require("../controllers/faculdadesController");
 
 
-router.post("/",controller.create)
-router.get("/",controller.SelectAll)
-router.put("/:id", controller.updateFaculdade)
-router.delete("/:id",controller.deleteFaculdade)
+router.post("/",controller.createFaculdade)
+router.get("/",controller.selectAllFaculdades)
+router.get("/:id",controller.selectById)
+router.put("/:id", controller.updateFaculdadeById)
+router.delete("/:id",controller.deleteFaculdadeById)
 
 module.exports = router;

@@ -4,9 +4,9 @@ const controller = require("../controllers/alunosController.js");
 
 router.get("/",controller.selectAll);
 router.post("/",controller.insertStudant);
-router.get("/:cpf",controller.selectById);
-router.put("/:cpf",controller.updateStudant);
-router.patch("/:cpf",controller.updateStudant);
+router.get("/:cpf",controller.selectAlunoById);
+router.put("/:cpf",controller.updateStudantById);
+router.patch("/:cpf",controller.updateStudantById);
 router.delete("/:cpf",controller.deleteStudant);
 
 
