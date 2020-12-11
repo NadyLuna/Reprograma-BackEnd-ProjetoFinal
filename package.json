@@ -17,8 +17,9 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "dotenv-safe": "^8.2.0",
-    "jsonwebtoken": "^8.5.1",
     "express": "^4.17.1",
-    "mongoose": "^5.10.17"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.17",
+    "validator": "^13.5.2"
   }
 }
