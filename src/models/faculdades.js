@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 
 const faculdadesSchema = new mongoose.Schema({
-    idFaculdade: { type: String },
+
+    idfaculdade: { type: Number },
+    codigo: { type: String},
     nomefaculdade: { type: String },
-    matriculado: { type: String},
+    nomealuno: { type: String},
+    cpf: { type: String },
+    matriculado: { type: Boolean},
         
     
 }, {

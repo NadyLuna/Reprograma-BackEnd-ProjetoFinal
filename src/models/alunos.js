@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
+const { isEmail } = require('validator');
 const{ faculdadesSchema } = require('./faculdades')
 
 const alunosSchema = new mongoose.Schema({
-    nome: { type: String },
-    email: { type: String },
-    cpf: { type: String, required: true },
+    
+    idaluno: { type: Number},
+    email: { type: String,lowercase: true,required: true, validate: [isEmail, 'Email inválido'], unique: true },
+    senha: { type: Number,lowercase: true,required: true},
     faculdade: [faculdadesSchema]
 }, {
     versionKey: false
