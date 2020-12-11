@@ -49,13 +49,13 @@ _____
 - [x] [express 4.17.1](https://https://expressjs.com/pt-br/)  
 - [x] [mongoose 5.10.17](https://https://mongoosejs.com/docs/)  
 - [x] [nodemon 2.0.6](https://https://www.npmjs.com/package/nodemon)
-- [x] [validator-js 0.2.1](https://www.npmjs.com/package/validator)
+- [x] [validator 13.5.2](https://www.npmjs.com/package/validator)
 
 3- Execute `npm start`
 
 4 -  Verificar o arquivo `.env.example` quais as variáveis de ambiente necessárias;
 ```
-* .env.example (Variáveis de ambiente necess)
+* .env.example (Variáveis de ambiente necessárias)
 
 MONGODB_URL=string_de_conexao_banco_de_dados
 SECRET=chave_secreta
