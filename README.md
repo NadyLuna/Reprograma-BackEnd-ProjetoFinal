@@ -31,7 +31,13 @@ _____
 ### :checkered_flag: Features 
 
 - Cadastro de faculdade/alunos
-   - Cadastrar Faculdades e respectivos alunos.
+   - Cadastrar Faculdades e respectivos alunos através de IdFaculdade e e-mail e senha para alunos.
+
+- Atualizar dados Faculdade/alunos
+   - Atualizar dados de Faculdade e alunos através de IdFaculdade e CPF aluno.
+
+- Deletar dados Faculdade/alunose
+   - Deletar Faculdade e alunos através de IdFaculdade e CPF aluno.
 
 - Check  
    - Checar se o aluno está matriculado e apto a solicitar carteira de estudante.
@@ -42,14 +48,16 @@ _____
 | --------------------------------------- | --------------------------------------------|
 | GET/alunos                              | Listar todos os alunos                      |
 | GET/faculdade                           | listar todas as faculdades                  |
-| GET/alunos/idAluno                      | localizar aluno específico                  |
+| GET/alunos/cpf                          | localizar aluno específico                  |
 | GET/faculdades/idFaculdade              | localizar Faculdade específica              |
+| GET/faculdades/alunos/matriculados      | localizar alunos matriculados               |
+| GET/faculdades/alunos/pending           | localizar alunos Não matriculados           |
 | POST/faculdades/alunos                  | Cadastrar nova Faculdade e alunos           |
 | POST/alunos                             | Cadastrar novo aluno                        |
 | PUT/faculdades/idFaculdade              | Alterar dados da Faculdade                  |
-| PUT/alunos/idAluno                      | Alterar dados do aluno                      |
-| PATCH/alunos/senha/idAluno              | Alterar senha do aluno                      |
-| DELETE/alunos/idAlunos                  | Excluir aluno                               |
+| PUT/alunos/cpf                          | Alterar dados do aluno                      |
+| PATCH/alunos/senha/cpf                  | Alterar senha do aluno                      |
+| DELETE/alunos/cpf                       | Excluir aluno                               |
 | DELETE/faculdades/idFaculdade           | Excluir faculdade                           |
 
 
@@ -59,7 +67,7 @@ _____
 
 #### - Clone & Install Dependencies
 1 - `Git clone https://github.com/NadyLuna/Reprograma-BackEnd-ProjetoFinal.git`  
-2- Instalar dependências NPM packages whith `npm install`  
+2- Instalar dependências NPM packages with `npm install`  
 2.1-  Dependencies used   
 - [x] [dotenv-safe 8.2.0](https://https://www.npmjs.com/package/dotenv-safe)  
 - [x] [express 4.17.1](https://https://expressjs.com/pt-br/)  
@@ -91,7 +99,7 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
 #### - Deploy 
 ![Heroku](https://img.shields.io/badge/Heroku-430098?align=style=flat-square&logo=heroku&logoColor=white)
 
-<a href="https://finalproject-reprograma.herokuapp.com/"><button style="background: #2365; border-radius: 1px; padding: 5px; cursor: pointer; color: #fff; border: none; font-size: 8px;">Clique aqui</button></a>  
+<a href="https://finalproject-reprograma.herokuapp.com/"><button style="background: #2365; border-radius: 1px; padding: 5px; cursor: pointer; color: #fff; border: none; font-size: 8px;">Acesse</button></a>  
 
 
 #### - Language, Software and Database
@@ -107,9 +115,11 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
   **Note:** Pode utilizar o Localhost pelo `http://localhost/3000/` ou pelo endereço do Heroku <a href="https://finalproject-reprograma.herokuapp.com/">Deploy</a>
 </p>
 
-## :handshake: **Contributing**
+### :handshake: **Contributing**
 
- Este Projeto é para fins de estudo. Fique a vontade em contribuir! Me mostre e me ensine o que você sabe!
+ Este Projeto é para fins de estudo através do Projeto [{Reprograma}](https://reprograma.com.br/) com apoio do Projeto M.I.N.As do Porto Digital Recife. 
+ 
+ Fique a vontade em contribuir! Me mostre e me ensine o que você sabe!
 
  Todo o tipo de contribuição será bem vindo!
 
@@ -126,4 +136,7 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
 2- Problemas com a  [DNS](https://use.opendns.com/) no computador;
 
 
+#### Licença
+
+Este projeto está sob a licença [MIT](./LICENSE.md).
 
