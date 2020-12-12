@@ -16,25 +16,28 @@
  <img src="https://img.shields.io/github/stars/NadyLuna/Reprograma-BackEnd-ProjetoFinal" > </p>
 
 
- <h4 align="center"> 
+ <h3 align="center"> 
 	🚧  Carteira de Estudante Fácil 🚀 Em construção...  🚧
-</h4>
-
+</h3>
 
 _____
+
+### Brief Overvienw
+
+  A ideia é dimirir as dificuldades para emissão de carteira d e estudante para universitários. Sem a necessidade de emissão de declarações, declarações não aceitas, inclusive. Sobretudo, dirimir as fraudes na emissão de carteira de estudante.
+
+  A Faculdade se encarregará de enviar os seu dados e dos seus alunose enviará para o estudante os dados de acesso a app, onde o mesmo terá que mudar a senha no seu primeiro acesso. Em seguida poderá verificar se está matriculado no período letivo e solicitar a carteira de estudade.
+ 
 ### Features :checkered_flag:
 
-- Cadastro de faculdade
-   - Cadastrar Faculdades participantes na aplicação através de login e senha
-
-- Cadastrar alunos
-   - Cadastrar alunos a partir de login e senha
+- Cadastro de faculdade/alunos
+   - Cadastrar Faculdades e respectivos alunos.
 
 - Check  
    - Checar se o aluno está matriculado e apto a solicitar carteira de estudante.
 
 #### Back-end requirements
- - Rota para cadastrar aluno(a) requerendo nome,e-mail e cpf;
+ 
  
 
 ## **Install instructions**
@@ -98,7 +101,8 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
  Todo o tipo de contribuição será bem vindo!
 
  -   🐛Encontrar e relatar problemas;
- -   📥 Envie PRs para ajudar a resolver problemas ou adicionar recursos
+ -   📥 Envie PRs para ajudar a resolver problemas ou adicionar recursos.  
+   **Note** Crie  uma branch para realizar as alterações : `git checkout -b feature/nome-da-sua-branch`
 
  
 
