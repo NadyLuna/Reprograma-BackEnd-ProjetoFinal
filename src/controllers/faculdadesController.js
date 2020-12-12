@@ -1,31 +1,22 @@
 const {faculdadesModel} = require('../models/faculdades')
 const {alunosModel} = require("../models/alunos");
 
-const createFaculdade = (req, res) => {  
-    const newFaculdade = new faculdadesModel({
-    codigo: req.body.codigo,
-    nomeFaculdade: req.body.nomeFaculdade,
-    nomeAluno: req.body.nomeAluno,
-    matriculado: req.body.matriculado,
-    alunos: req.body.alunos.map(aluno => {
-        const studant = new alunosModel({
-            email: aluno.email,
-            senha: aluno.senha,
-            cpf: aluno.cpf,
-        });
-        studant.save(err => {
+const createCadastro = (req, res) => {  
+    const newColege = new faculdadesModel(req.body)
+    newColege.alunos.map(aluno => {
+        const newStudant = new alunosModel(aluno)
+        newStudant.save(err => {
             if (err) {
             return res.status(424).send({ message: err.message });
             };        
         }); 
-        return studant;     
+        return newStudant;     
         })
-    });   
-    newFaculdade.save(err => {
+    newColege.save(err => {
         if (err) {
         return res.status(424).send({ message: err.message });
         };
-        return res.status(201).send({message: 'Faculdade Cadastrada com Sucesso!'});
+        return res.status(201).send({message: 'Cadastro feito com Sucesso!'});
     });  
 };
 
@@ -100,7 +91,7 @@ const deleteFaculdadeById = (req, res) => {
 };
 
 module.exports = {
-    createFaculdade,
+    createCadastro,
     selectAllFaculdades,
     selectById,
     updateFaculdadeById,

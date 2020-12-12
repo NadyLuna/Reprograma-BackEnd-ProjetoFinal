@@ -61,6 +61,26 @@ const updateStudantById = (req, res) => {
     });
 };
 
+const updateSenhaById = (req, res) => {
+    const cpf = req.params.cpf;
+
+    alunosModel.findOne({cpf}, (err, senha) => {
+        console.log(senha.length) 
+        if( senha.length > 0 ){
+            return res.status(404).send("Não há alunos(a) com este cpf, favor colocar cpf válido ou cadastrar");
+        }else {
+            alunosModel.updateOne({cpf}, {$set: req.body}, function (err){
+
+                if(err) {
+                return res.status(500).send({message: err.message});
+            }
+                return res.status(200).send({message: "Senha atualizada com sucesso", status: true});
+            });        
+        };
+    });
+};
+
+ 
 const deleteStudant = (req, res) => {
     const cpf = req.params.cpf;
     alunosModel.find({cpf}, (err, alunos) => {
@@ -82,5 +102,6 @@ module.exports = {
     selectAlunoById,
     insertStudant,
     updateStudantById,
+    updateSenhaById,
     deleteStudant
 }
