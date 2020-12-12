@@ -26,11 +26,43 @@ const selectAllFaculdades = (req, res) => {
         if (error) {
         return res.status(500).send(error)
         }
-  
-        return res.status(200).send(faculdade)
+            return res.status(200).send(faculdade)
     })
-  }
+}
 
+const selectMatriculados = (req, res) => {
+    faculdadesModel.find({ matriculado: true }, function (err, studant) {
+        if (err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            const studantFiltados = studant.map(studant => {
+            return {
+                nome: studant.nomeAluno,
+                faculdade: studant.nomeFaculdade
+                }
+            })
+    
+            res.status(200).send(studantFiltados);
+            }
+    })
+}
+
+const selectMatriculaPending = (req, res) => {
+    faculdadesModel.find({ matriculado: false }, function (err, studant) {
+        if (err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            const studantFiltados = studant.map(studant => {
+            return {
+                nome: studant.nomeAluno,
+                faculdade: studant.nomeFaculdade
+                }
+            })
+    
+            res.status(200).send(studantFiltados);
+            }
+    })
+}
 
 const selectById = (req, res) => {
     const id = req.params.id;
@@ -93,12 +125,10 @@ const deleteFaculdadeById = (req, res) => {
 module.exports = {
     createCadastro,
     selectAllFaculdades,
+    selectMatriculados,
+    selectMatriculaPending,
     selectById,
     updateFaculdadeById,
     deleteFaculdadeById
 
 }
-
-
-
-
