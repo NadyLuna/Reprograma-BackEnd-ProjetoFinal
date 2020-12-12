@@ -28,7 +28,7 @@ _____
 
   A Faculdade se encarregará de enviar os seu dados e dos seus alunose enviará para o estudante os dados de acesso a app, onde o mesmo terá que mudar a senha no seu primeiro acesso. Em seguida poderá verificar se está matriculado no período letivo e solicitar a carteira de estudade.
  
-### Features :checkered_flag:
+### :checkered_flag: Features 
 
 - Cadastro de faculdade/alunos
    - Cadastrar Faculdades e respectivos alunos.
@@ -38,7 +38,20 @@ _____
 
 #### Back-end requirements
  
- 
+| Rotas                                   |  Descrição
+| --------------------------------------- | --------------------------------------------|
+| GET/alunos                              | Listar todos os alunos                      |
+| GET/faculdade                           | listar todas as faculdades                  |
+| GET/alunos/idAluno                      | localizar aluno específico                  |
+| GET/faculdades/idFaculdade              | localizar Faculdade específica              |
+| POST/faculdades/alunos                  | Cadastrar nova Faculdade e alunos           |
+| POST/alunos                             | Cadastrar novo aluno                        |
+| PUT/faculdades/idFaculdade              | Alterar dados da Faculdade                  |
+| PUT/alunos/idAluno                      | Alterar dados do aluno                      |
+| PATCH/alunos/senha/idAluno              | Alterar senha do aluno                      |
+| DELETE/alunos/idAlunos                  | Excluir aluno                               |
+| DELETE/faculdades/idFaculdade           | Excluir faculdade                           |
+
 
 ## **Install instructions**
 
