@@ -28,6 +28,7 @@ const selectAll = (req, res) => {
     });
 };
 
+
 const selectAlunoById = (req, res) => {
     const cpf = req.params.cpf;
 
@@ -99,6 +100,7 @@ const deleteStudant = (req, res) => {
 
 module.exports = {
     selectAll,
+    validation,
     selectAlunoById,
     insertStudant,
     updateStudantById,
