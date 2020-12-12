@@ -6,7 +6,7 @@ router.get("/",controller.selectAll);
 router.post("/",controller.insertStudant);
 router.get("/:cpf",controller.selectAlunoById);
 router.put("/:cpf",controller.updateStudantById);
-router.patch("/:cpf",controller.updateStudantById);
+router.patch("/senha/:cpf",controller.updateSenhaById);
 router.delete("/:cpf",controller.deleteStudant);
 
 
