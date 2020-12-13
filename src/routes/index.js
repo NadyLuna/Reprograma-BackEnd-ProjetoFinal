@@ -5,8 +5,7 @@ router.get("/", (req, res) => {
   res.status(200).send({
     title:
       "Carteira de estudante Fácil! A forma mais segura para você adquirir seus direitos",
-    date: "07/12/2020",
-    version: "1.0.0",
+        version: "1.0.0",
   });
 });
 
