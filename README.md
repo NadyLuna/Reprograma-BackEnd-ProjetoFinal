@@ -24,9 +24,9 @@ _____
 
 ### Brief Overvienw
 
-  A ideia é dimirir as dificuldades para emissão de carteira d e estudante para universitários. Sem a necessidade de emissão de declarações, declarações não aceitas, inclusive. Sobretudo, dirimir as fraudes na emissão de carteira de estudante.
+  A ideia é dimirir as dificuldades para emissão de carteira de estudante para universitários, sem a necessidade de emissão de declarações e evitar declarações não aceitas, inclusive. Sobretudo, dirimir as fraudes na emissão de carteira de estudante.
 
-  A Faculdade se encarregará de enviar os seu dados e dos seus alunose enviará para o estudante os dados de acesso a app, onde o mesmo terá que mudar a senha no seu primeiro acesso. Em seguida poderá verificar se está matriculado no período letivo e solicitar a carteira de estudade.
+  A Faculdade se encarregará de enviar os seu dados e dos seus alunos e enviará para o estudante os dados de acesso a app, onde o mesmo terá que mudar a senha no seu primeiro acesso. Em seguida poderá verificar se está matriculado no período letivo e solicitar a carteira de estudante.
  
 ### :checkered_flag: Features 
 
@@ -117,7 +117,7 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
 
 ### :handshake: **Contributing**
 
- Este Projeto é para fins de estudo através do Projeto [{Reprograma}](https://reprograma.com.br/) com apoio do Projeto M.I.N.As do Porto Digital Recife. 
+ Este Projeto é para fins de estudo através do Projeto [{Reprograma}](https://reprograma.com.br/) com apoio do Projeto M.I.N.As do Porto Digital Recife.
  
  Fique a vontade em contribuir! Me mostre e me ensine o que você sabe!
 
